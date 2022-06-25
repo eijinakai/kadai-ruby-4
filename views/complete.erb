@@ -38,8 +38,10 @@
         <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
         <p>ありがとうございました。送信を受け付けました。</p>
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
+
                 <h3>送信内容</h3>
         <table class="table table table-border-bottom">
+
             <tr>
                 <th class="text-top">会社名</th>
                 <td><%= params['company'] %></td>
@@ -58,7 +60,8 @@
             </tr>
             <tr>
                 <th class="text-top">内容</th>
-                <td><%= params['content'.gsub(/\r\n|\r|\n/, "<br>")] %></td>
+                <%  content = params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
+                <td><%= content %></td>
             </tr>            
         </table>
 
